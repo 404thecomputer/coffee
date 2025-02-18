@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class EnemyBehavior : MonoBehaviour
     private int yDirection;
     public float speed = 1.0f;
     public GameObject player;
+    public Vector3 startLocation; //set start location
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +16,7 @@ public class EnemyBehavior : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         xDirection = 0;
         yDirection = -1;
+        startLocation = transform.position;
     }
 
     // Update is called once per frame
@@ -21,11 +24,19 @@ public class EnemyBehavior : MonoBehaviour
     {
 
     }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision!");
+        if (collision.collider.name == "Player")
+        {
+            Debug.Log("Collision!");
+            GameManager.Instance.resetPlayerEnemyLocations();
 
+        }
+
+    }
+    public void resetLocation()
+    {
+        transform.position = startLocation;
     }
 
     void FixedUpdate()

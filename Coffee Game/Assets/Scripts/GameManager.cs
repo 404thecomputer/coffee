@@ -113,6 +113,19 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public GameObject player;
+    public GameObject[] enemies;
+
+    public void resetPlayerEnemyLocations()
+    {
+        player.transform.position = new Vector3(0, 15);
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            EnemyBehavior s = enemies[i].GetComponent<EnemyBehavior>();
+            s.resetLocation();
+        }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
