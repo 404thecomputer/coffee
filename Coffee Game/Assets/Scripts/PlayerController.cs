@@ -24,4 +24,12 @@ public class PlayerController : MonoBehaviour
     {
         rigidBody.linearVelocity = new Vector2(horizontal * speed, vertical * speed);
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "EnemyTrigger")
+        {
+            Debug.Log("EnemyTrigger hit");
+            GameManager.Instance.activateEnemies();
+        }
+    }
 }
