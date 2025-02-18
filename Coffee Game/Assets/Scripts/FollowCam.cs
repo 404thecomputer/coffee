@@ -36,6 +36,7 @@ public class FollowCam : MonoBehaviour
             if (spriteLocation.x < leftBound)
             {
                 pos.x -= leftBound - spriteLocation.x;
+
             }
 
             else if (spriteLocation.x > rightBound)
