@@ -31,7 +31,7 @@ public class EnemyBehavior : MonoBehaviour
         if (collision.collider.name == "Player")
         {
             Debug.Log("Collision!");
-            GameManager.Instance.resetPlayerEnemyLocations();
+            GameManager.Instance.resetEnemyLocations();
 
         }
 

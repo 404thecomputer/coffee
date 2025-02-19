@@ -30,8 +30,19 @@ public class PlayerConvo : MonoBehaviour
                 Debug.Log("Hit Something!!" + hit.collider.gameObject.name);
                 if (hit.collider.gameObject.TryGetComponent(out NPC npc))
                 {
-
-                    GameManager.Instance.StartDialogue(npc.dialogueAsset.dialogue, npc.StartPosition, npc.npcName);
+                    Debug.Log("speaking with npc");
+                    if (gameObject.GetComponent<PlayerController>().hasCoffee)
+                    {
+                        Debug.Log("Player speaks and has the coffee");
+                        GameManager.Instance.StartDialogue(npc.dialogueAsset.dialogue, npc.coffeePosition, npc.npcName, 3); //if has coffee
+                        gameObject.GetComponent<PlayerController>().removeCoffee();
+                        GameManager.Instance.resetArena();
+                    }
+                    else
+                    {
+                        Debug.Log("player speaks but has no coffee");
+                        GameManager.Instance.StartDialogue(npc.dialogueAsset.dialogue, npc.StartPosition, npc.npcName, 2); //if no coffee
+                    }
                 }
             }
         }

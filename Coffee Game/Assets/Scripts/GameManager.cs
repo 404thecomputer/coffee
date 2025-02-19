@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public static event Action OnDialogueEnded;
     bool skipLineTriggered;
 
-    public void StartDialogue(string[] dialogue, int startPosition, string name)
+    public void StartDialogue(string[] dialogue, int startPosition, string name, int stopPosition)
     {
         Debug.Log(name);
         Debug.Log(dialogue);
@@ -41,17 +41,21 @@ public class GameManager : MonoBehaviour
 
         StopAllCoroutines();
 
-        StartCoroutine(RunDialogue(dialogue, startPosition));
+        StartCoroutine(RunDialogue(dialogue, startPosition, stopPosition));
 
     }
 
-    IEnumerator RunDialogue(string[] dialogue, int startPosition)
+    IEnumerator RunDialogue(string[] dialogue, int startPosition, int stopPosition)
     {
         skipLineTriggered = false;
         OnDialogueStarted?.Invoke();
 
         for (int i = startPosition; i < dialogue.Length; i++)
         {
+            if (i == stopPosition)
+            {
+                break;
+            }
             //dialogueText.text = dialogue[i];
             dialogueText.text = null;
             StartCoroutine(TypeTextUncapped(dialogue[i]));
@@ -113,13 +117,11 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    public GameObject player;
+    public GameObject coffee;
     public GameObject[] enemies;
 
-    public void resetPlayerEnemyLocations()
+    public void resetEnemyLocations()
     {
-        player.transform.position = new Vector3(0, 15);
         for (int i = 0; i < enemies.Length; i++)
         {
             EnemyBehavior s = enemies[i].GetComponent<EnemyBehavior>();
@@ -133,6 +135,14 @@ public class GameManager : MonoBehaviour
             EnemyBehavior s = enemies[i].GetComponent<EnemyBehavior>();
             s.activate();
         }
+    }
+
+    public void resetArena()
+    {
+        resetEnemyLocations();
+        Vector3 pos = new Vector3(0, 31);
+
+        Instantiate(coffee, pos, Quaternion.identity);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
