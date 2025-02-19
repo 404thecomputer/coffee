@@ -178,3 +178,4 @@ MonoBehaviour:
   speed: 2
   player: {fileID: 0}
   startLocation: {x: 0, y: 0, z: 0}
+  audioClip: {fileID: 8300000, guid: 86972ed7573cda346abf72fba83ecdc5, type: 3}

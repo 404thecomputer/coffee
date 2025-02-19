@@ -10,6 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject player;
     public Vector3 startLocation; //set start location
     private bool activated = false;
+    [SerializeField] private AudioClip audioClip;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,7 +32,9 @@ public class EnemyBehavior : MonoBehaviour
         if (collision.collider.name == "Player")
         {
             Debug.Log("Collision!");
-            GameManager.Instance.resetEnemyLocations();
+
+            GameManager.Instance.resetArena();
+            SoundManager.Instance.playSoundClip(audioClip, transform, 1.0f);
 
         }
 
