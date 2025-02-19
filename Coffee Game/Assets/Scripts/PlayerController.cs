@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rigidBody;
     public bool hasCoffee;
+    [SerializeField] private AudioClip audioClip;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         hasCoffee = true;
         gameObject.GetComponent<TrailRenderer>().emitting = true;
+        SoundManager.Instance.playSoundClip(audioClip, transform, 1.0f);
 
     }
     public void removeCoffee()

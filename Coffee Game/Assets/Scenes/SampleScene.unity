@@ -28995,6 +28995,7 @@ MonoBehaviour:
   vertical: 0
   speed: 5
   hasCoffee: 0
+  audioClip: {fileID: 8300000, guid: 836ff7efff30ccf409bb40220dd88a5f, type: 3}
 --- !u!61 &2022606415
 BoxCollider2D:
   m_ObjectHideFlags: 0
