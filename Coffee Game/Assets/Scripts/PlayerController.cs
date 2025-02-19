@@ -30,8 +30,17 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.name == "EnemyTrigger")
         {
-            // Debug.Log("EnemyTrigger hit");
-            GameManager.Instance.activateEnemies();
+            if (!hasCoffee)
+            {
+                Debug.Log("EnemyTrigger hit, no coffee");
+                GameManager.Instance.activateEnemies();
+            }
+            else if (hasCoffee)
+            {
+                Debug.Log("EnemyTrigger hit, has coffee");
+                GameManager.Instance.resetArena();
+                collision.gameObject.GetComponent<EnemyTrigger>().particles.Play();
+            }
         }
         else if (collision.name.Contains("Coffee"))
         {

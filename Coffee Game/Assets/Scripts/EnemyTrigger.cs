@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyTrigger : MonoBehaviour
 {
+
+    public ParticleSystem particles;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,4 +23,5 @@ public class EnemyTrigger : MonoBehaviour
     {
         Debug.Log("Trigger Collision!!");
     }
+
 }
