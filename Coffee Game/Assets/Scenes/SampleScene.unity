@@ -29385,9 +29385,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 500094483974095862, guid: 639fbec46a252fd4e9a0a21b8bce255e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4926466167421567871, guid: 99668142ca6cedb47bcdf1bb33dc9bdd, type: 3}
     - target: {fileID: 999987589267317595, guid: 639fbec46a252fd4e9a0a21b8bce255e, type: 3}
       propertyPath: m_Name
       value: Coffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922115621562354244, guid: 639fbec46a252fd4e9a0a21b8bce255e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922115621562354244, guid: 639fbec46a252fd4e9a0a21b8bce255e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4876344422452944897, guid: 639fbec46a252fd4e9a0a21b8bce255e, type: 3}
       propertyPath: m_LocalPosition.x
