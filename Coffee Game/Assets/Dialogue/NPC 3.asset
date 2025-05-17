@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: NPC 3
   m_EditorClassIdentifier: 
   dialogue:
-  - Hey dude!
-  - 'Did John try to get you to get his coffee? Yeah he''s an addict. There is coffee
-    ahead of us, but there are a bunch of crazy girls who will attack you if you
-    try to take it. Maybe you could use some of the obstacles in there to dodge them. '
-  - Good luck!
-  - Good luck!
+  - 'Say, you and I seem to dress alike. Same dry cleaner? '
+  - How long have you been on this island? I can't remember when I got here. There
+    doesn't seem to be any way off this place but to swim far out into the ocean.
+  - Good thing the weather is decent today, I can say that for sure.

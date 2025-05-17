@@ -54,6 +54,11 @@ public class PlayerConvo : MonoBehaviour
                             Debug.Log("player speaks with jack");
                             GameManager.Instance.StartDialogue(npc.dialogueAsset.dialogue, npc.StartPosition, npc.npcName, 3);
                         }
+                        else if (hit.collider.name == "NPC 3")
+                        {
+                            Debug.Log("player speaks with jay");
+                            GameManager.Instance.StartDialogue(npc.dialogueAsset.dialogue, npc.StartPosition, npc.npcName, 3);
+                        }
                     }
                 }
             }
