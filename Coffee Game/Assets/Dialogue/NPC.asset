@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: NPC
   m_EditorClassIdentifier: 
   dialogue:
-  - Hello brave adventurer, I must make a request. I am quite fond of coffee and
+  - 'Hello brave adventurer, I must make a request. I am quite fond of coffee and
     I seem to be out. Can you help me acquire some? What am I saying, of course you
-    will. Good luck!
-  - Get going dude
-  - Hey, you got my coffee! Thank you so much! Now go get me another
+    will. '
+  - Begone with thee, and fetch me my coffee! Good luck!
+  - "Hey, you got my coffee! Thank you so much! \n*sluuuuurp*\nAh, that hit the spot.
+    Now bring me another!"
