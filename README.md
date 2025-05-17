@@ -17,3 +17,5 @@ Art Assets: https://kenney.nl/assets/pico-8-city
 Sound Assets: https://opengameart.org/content/bad-sound-1 
 
 What Colten did: Created the tilemap, implemented player movement, crafted and refined the basic gameplay loop, implemented NPC interaction and dialog, made a particle system for when the player wins, and trail that is supposed to resemble a trail of coffee. . 
+
+What Jake did: Created the Coffee, made the game more visually appealing by revamping the tilemap & textboxes & fonts, added another NPC, implemented counter of coffees collected

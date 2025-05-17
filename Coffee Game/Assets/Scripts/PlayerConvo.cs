@@ -42,6 +42,7 @@ public class PlayerConvo : MonoBehaviour
                                 GameManager.Instance.StartDialogue(npc.dialogueAsset.dialogue, npc.coffeePosition, npc.npcName, 3); //if has coffee
                                 gameObject.GetComponent<PlayerController>().removeCoffee();
                                 GameManager.Instance.resetArena();
+                                ScoreManager.Instance.IncScore(1);
                             }
                             else
                             {
