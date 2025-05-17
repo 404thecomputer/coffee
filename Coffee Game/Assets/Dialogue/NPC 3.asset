@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392d9fb71b401be45a2e5ac1b6381da6, type: 3}
+  m_Name: NPC 3
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Hey dude!
+  - 'Did John try to get you to get his coffee? Yeah he''s an addict. There is coffee
+    ahead of us, but there are a bunch of crazy girls who will attack you if you
+    try to take it. Maybe you could use some of the obstacles in there to dodge them. '
+  - Good luck!
+  - Good luck!
